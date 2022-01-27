@@ -39,19 +39,24 @@
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
           <span class="glyphicon glyphicon-search"></span>
-          <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
-          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search <i class="fa fa-search"></i></button>
         </form>
+        <div class="col-sm-0">
+          <a style="margin-left: 10px" class="btn btn-secondary" href="login.php">Login <i class="fa fa-user"></i></a>
+        </div>
       </div>
     </nav>
-  </header>
-  <div class="container">
-    <div class="jumbotron">
-      <h1 class="heading d-flex justify-content-center">This is my first page</h1>
-      <blockquote class="d-flex justify-content-center blockquote">
-        <p class="mb-0 lead ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      </blockquote>
+    <div class="text-center">
+      <img style="height: auto;" class="img-fluid d-block mx-auto" width="100%" src="images/img.jpg" alt="">
     </div>
+  </header>
+  <div class="jumbotron">
+    <h1 class="heading d-flex justify-content-center">This is my first page</h1>
+    <blockquote class="d-flex justify-content-center blockquote">
+      <p class="mb-0 lead ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+    </blockquote>
+  </div>
+  <div class="container">
     <?php
     $sql_sel = "SELECT * FROM users";
     $run_sel = mysqli_query($conn, $sql_sel);
@@ -84,6 +89,7 @@
       <button type="submit" class="btn btn-primary" name="submit_user">Submit</button>
     </form>
   </div>
+  <?php include 'includes/footer.php'; ?>
   <script src="js/bootstrap.js"></script>
   <script src="js/jquery.js"></script>
 </body>
